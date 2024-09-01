@@ -33,3 +33,7 @@ input, button {
 button {
     cursor: pointer;
 }
+
+input[type="text"] {
+    text-transform: uppercase;
+}
