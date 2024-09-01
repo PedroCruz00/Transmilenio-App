@@ -14,8 +14,8 @@
     <div class="form-section">
         <h2>Register/Update Bus</h2>
         <form id="busForm">
-            <input type="text" id="plate" placeholder="Bus Plate" required>
-            <input type="text" id="arrivalTime" placeholder="Arrival Time" required>
+            <input type="text" id="plate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
+            <input type="time" id="arrivalTime" placeholder="Arrival Time" required>
             <button type="submit">Submit</button>
         </form>
     </div>
@@ -23,7 +23,7 @@
     <div class="form-section">
         <h2>Search Bus</h2>
         <form id="searchForm">
-            <input type="text" id="searchPlate" placeholder="Bus Plate" required>
+            <input type="text" id="searchPlate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
             <button type="submit">Search</button>
         </form>
         <div id="searchResult"></div>
@@ -32,7 +32,7 @@
     <div class="form-section">
         <h2>Delete Bus</h2>
         <form id="deleteForm">
-            <input type="text" id="deletePlate" placeholder="Bus Plate" required>
+            <input type="text" id="deletePlate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
             <button type="submit">Delete</button>
         </form>
     </div>
