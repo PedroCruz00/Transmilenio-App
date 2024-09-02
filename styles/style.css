@@ -87,3 +87,9 @@ button:hover{
     border-color: var(--main-color);
     color: var(--main-color);
 }
+
+input[type="text"] {
+    text-transform: uppercase;
+}
+
+
