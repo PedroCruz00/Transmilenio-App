@@ -1,6 +1,6 @@
 document.getElementById('busForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const plate = document.getElementById('plate').value;
     const arrivalTime = document.getElementById('arrivalTime').value;
 
@@ -18,7 +18,7 @@ document.getElementById('busForm').addEventListener('submit', async (e) => {
 
 document.getElementById('searchForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const plate = document.getElementById('searchPlate').value;
 
     const response = await fetch('/search-bus', {
@@ -31,7 +31,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
 
     if (response.ok) {
         const bus = await response.json();
-        document.getElementById('searchResult').innerText = 
+        document.getElementById('searchResult').innerText =
             `Bus Plate: ${bus.plate}, Arrival Time: ${bus.arrivalTime}, Edits: ${bus.edits}`;
     } else {
         alert(await response.text());
@@ -40,7 +40,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
 
 document.getElementById('deleteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const plate = document.getElementById('deletePlate').value;
 
     const response = await fetch('/delete-bus', {

@@ -11,30 +11,33 @@
 <body>
     <h1>Transmilenio Buses Tracker</h1>
     
-    <div class="form-section">
-        <h2>Register/Update Bus</h2>
-        <form id="busForm">
-            <input type="text" id="plate" placeholder="Bus Plate" required>
-            <input type="text" id="arrivalTime" placeholder="Arrival Time" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <div class="form">
 
-    <div class="form-section">
-        <h2>Search Bus</h2>
-        <form id="searchForm">
-            <input type="text" id="searchPlate" placeholder="Bus Plate" required>
-            <button type="submit">Search</button>
-        </form>
-        <div id="searchResult"></div>
-    </div>
-
-    <div class="form-section">
-        <h2>Delete Bus</h2>
-        <form id="deleteForm">
-            <input type="text" id="deletePlate" placeholder="Bus Plate" required>
-            <button type="submit">Delete</button>
-        </form>
+        <div class="form-section">
+            <h2>Register or Update Bus</h2>
+            <form id="busForm">
+                <input type="text" id="plate" placeholder="Bus Plate" required>
+                <input type="text" id="arrivalTime" placeholder="Arrival Time" required>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        
+        <div class="form-section">
+            <h2>Search Bus</h2>
+            <form id="searchForm">
+                <input type="text" id="searchPlate" placeholder="Bus Plate" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResult"></div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Delete Bus</h2>
+            <form id="deleteForm">
+                <input type="text" id="deletePlate" placeholder="Bus Plate" required>
+                <button type="submit">Delete</button>
+            </form>
+        </div>
     </div>
 
     <script src="scripts/script.js"></script>

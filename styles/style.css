@@ -1,35 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+:root{
+    --main-color: #8386f9;
+    --charcoal-gray: #292929;
+    --light-gray: #E8E8E8;
+    --whisper-white: #F6F6F6;
+    --dark-silver: #C0C0C0;
+    --main-font: "JetBrains Mono";
+    --titulos: 2rem;
+    --sub-titulos: 1.7rem;
+    --texto-1: 1.4rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    height: 100vh; 
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 1rem;
 }
 
 h1 {    
     text-align: center;
-    background-color: lightskyblue;
+    background-color: var(--main-color);
     width: fit-content;
     padding: .5rem;
     border-radius: .4rem;
+    font-size: var(--titulos);
+}
+h2{
+    font-size: var(--sub-titulos);
+    margin: .5rem;
+}
+
+.form{
+    width: 40%;
 }
 
 .form-section {
-    display: block;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
     margin-bottom: .3rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: .5rem;
 }
 
 input, button {
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
     padding: .2rem;
-    font-size: 1rem;
+    font-size: var(--texto-1);
+    border-radius: .2rem;
 }
 
 button {
     cursor: pointer;
+    padding: .4rem;
+    background-color: var(--whisper-white);
+    border: 2px solid var(--charcoal-gray);
+    
+}
+
+input:focus{
+    border: 2px solid var(--main-color);
+    outline: none;
+}
+
+button:hover{
+    border-color: var(--main-color);
+    color: var(--main-color);
 }
