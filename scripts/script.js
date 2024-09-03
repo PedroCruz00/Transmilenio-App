@@ -1,7 +1,7 @@
 document.getElementById('busForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const plate = document.getElementById('plate').value;
+    const plate = document.getElementById('plate').value.toUpperCase();
     const arrivalTime = document.getElementById('arrivalTime').value;
 
     const response = await fetch('/register-bus', {
@@ -19,7 +19,7 @@ document.getElementById('busForm').addEventListener('submit', async (e) => {
 document.getElementById('searchForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const plate = document.getElementById('searchPlate').value;
+    const plate = document.getElementById('searchPlate').value.toUpperCase();
 
     const response = await fetch('/search-bus', {
         method: 'POST',
@@ -41,7 +41,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
 document.getElementById('deleteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const plate = document.getElementById('deletePlate').value;
+    const plate = document.getElementById('deletePlate').value.toUpperCase();
 
     const response = await fetch('/delete-bus', {
         method: 'POST',

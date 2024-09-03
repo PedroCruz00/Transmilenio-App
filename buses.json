@@ -1,3 +1,38 @@
 {
-  "buses": []
+  "buses": [
+    {
+      "plate": "KSK322",
+      "arrivalTime": "01:01",
+      "edits": 1
+    },
+    {
+      "plate": "lfD321",
+      "arrivalTime": "23:12",
+      "edits": 1
+    },
+    {
+      "plate": "sDs321",
+      "arrivalTime": "03:03",
+      "edits": 1
+    },
+    {
+      "plate": "lEp343",
+      "arrivalTime": "03:03",
+      "edits": 1
+    },
+    {
+      "arrivalTime": "03:23",
+      "edits": 1
+    },
+    {
+      "plate": "SLR321",
+      "arrivalTime": "23:43",
+      "edits": 1
+    },
+    {
+      "plate": "MWW321",
+      "arrivalTime": "23:43",
+      "edits": 1
+    }
+  ]
 }
