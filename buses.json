@@ -1,3 +1,14 @@
 {
-  "buses": []
-}Compo
+  "buses": [
+    {
+      "plate": "KKD321",
+      "arrivalTime": "24-09-03-03:12",
+      "edits": 3
+    },
+    {
+      "plate": "FDS214",
+      "arrivalTime": "24/09/03/23:04",
+      "edits": 1
+    }
+  ]
+}

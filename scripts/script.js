@@ -4,12 +4,20 @@ document.getElementById('busForm').addEventListener('submit', async (e) => {
     const plate = document.getElementById('plate').value.toUpperCase();
     const arrivalTime = document.getElementById('arrivalTime').value;
 
+    const now = new Date();
+    const year = String(now.getFullYear()).slice(-2);
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const fullDate = `${year}/${month}/${day}`;
+
+    const fullArrivalTime = `${fullDate}/${arrivalTime}`;
+
     const response = await fetch('/register-bus', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ plate, arrivalTime }),
+        body: JSON.stringify({ plate, arrivalTime: fullArrivalTime }),
     });
 
     const result = await response.text();
