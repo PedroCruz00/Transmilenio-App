@@ -38,7 +38,7 @@ Este proyecto es una aplicación web para registrar, buscar y eliminar buses en 
 
 ### Requisitos Previos
 
-- Node.js y npm instalados en tu sistema.
+- Node.js, express y npm instalados en tu sistema.
 
 ## Uso
 
