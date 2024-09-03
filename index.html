@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transmilenio</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1>Transmilenio Buses Tracker</h1>
-    
-    <div class="form-section">
-        <h2>Register/Update Bus</h2>
-        <form id="busForm">
-            <input type="text" id="plate" placeholder="Bus Plate" required>
-            <input type="text" id="arrivalTime" placeholder="Arrival Time" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <header>
+        <h1>Transmilenio Buses Tracker</h1>
+    </header>
 
-    <div class="form-section">
-        <h2>Search Bus</h2>
-        <form id="searchForm">
-            <input type="text" id="searchPlate" placeholder="Bus Plate" required>
-            <button type="submit">Search</button>
-        </form>
-        <div id="searchResult"></div>
-    </div>
+    <main>
 
-    <div class="form-section">
-        <h2>Delete Bus</h2>
-        <form id="deleteForm">
-            <input type="text" id="deletePlate" placeholder="Bus Plate" required>
-            <button type="submit">Delete</button>
-        </form>
-    </div>
-
-    <script src="scripts/script.js"></script>
-</body>
+        <div class="form">
+            
+            <div class="form-section">
+                <h2>Register/Update Bus</h2>
+                <form id="busForm">
+                    <input type="text" id="plate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
+                    <input type="time" id="arrivalTime" placeholder="Arrival Time" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="form-section">
+                <h2>Search Bus</h2>
+                <form id="searchForm">
+                    <input type="text" id="searchPlate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="searchResult"></div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Delete Bus</h2>
+                <form id="deleteForm">
+                    <input type="text" id="deletePlate" placeholder="Bus Plate" required pattern="[A-Za-z]{3}[0-9]{3}" title="Debe ser en formato ABC123">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </main>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
